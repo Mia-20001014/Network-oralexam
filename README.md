@@ -42,5 +42,19 @@ tcpdump is a network packet capture tool that allows users to intercept and anal
 Command:  tcpdump -i <interface> ，默认只显示第三层及以上的info, Option: -e 开启后可以看到第二层的info; -i可以指定看某接口的数据流，否则会捕捉全部 
 
 # ARP and NDP
+ARP (Address Resolution Protocol) is used in IPv4 networks to map an IP address to a MAC address. Since communication on the local network happens via MAC addresses, ARP is necessary to discover the hardware address associated with an IP. (like a phone number book)
+
+NDP (Neighbor Discovery Protocol) is used in IPv6 networks and replaces ARP. It provides:
+IP-to-MAC address resolution
+Stateless address autoconfiguration
+Neighbor reachability detection
+Router discovery
+Prefix distribution
+
+# OSPF,RIP,BGP
+OSPF所用算法：Dijkstra
+RIP: Distance Vector
+BGP: Path Vector
+
 
 
