@@ -1,2 +1,46 @@
 # Network-oralexam
-Some preparation for oralexam in practical curse Computer-Network
+Some basic kownledges in Blatt1
+
+# 经典OSI七层模型每层分别是什么？数据在每一层以什么形式传输？前三层每一层有些什么设备？这些设备的作用是什么？前四层是如何配合的？
+The classic OSI 7 layers model: 
+
+1.Physical Layer: Data are stored and trasmitted here as 0 and 1, which is a bitstream.
+Devices: cable,repeaters... cable:Transmits bitstreams over physical media; repeaters:Regenerates and amplifies signals to extend transmission range.
+
+2.Data link: Data are encapsulated as a frame in here
+Devices: switch, bridges... switch:Forwards frames based on MAC addresses; operates within a LAN. Bridge:Connects two LAN segments; filters traffic based on MAC addresses.
+
+3.Network: Data are encapsulated as a packet in here
+Devises：Routers, Firewall. routers: Forwards packets based on IP addresses; connects different networks.
+
+4.Transport:Data are encapsulated as a segment in here
+Protocols: TCP,UDP
+
+5.Session
+6.Presentation
+7.Application
+
+# 什么是基于类的地址转发和CIDR？它们的区别是什么？
+
+IPv4 addresses are divided into five classes (A–E) based on their leading bits.
+Classes A, B, and C are used for unicast communication; Class D is for multicast, and Class E is reserved.
+Each class has its own address range and default subnet mask.
+Classful addressing uses the leading bits of an IP address to determine its class and automatically split the address into network and host portions. Routers use this class to forward packets accordingly.
+IP Address-->Subnetclass---->Netz_ID-->Next hop
+
+CIDR
+IP Address + Router table --> a list of IP Address, which can match the input IP Address --largest prefix match--> Next hop
+
+# 如何探寻一个现有网络的拓扑结构(但还未进行配置)
+1. Command: ip address show  ------> check how many ethnets this device have, and each ethnet's ip address(if it has)
+3. Command: ip address add 192.168.1.1/24 dev ethX -----> give each ethX on each device a unique IP Address (配置)
+4. Command: ip link set ethX up ----->激活每个interface
+5. Command: ping -i ethX ------>每个接口去ping另一个指定接口的IP Address，如果可以成功ping，则证明该两设备通过该两接口相连
+
+# tcpdump的基础知识
+tcpdump is a network packet capture tool that allows users to intercept and analyze packets on a network. It provides detailed information about each packet passing through a network interface, such as source IP address, destination IP address, protocol type, and port numbers. It's commonly used by network administrators and security analysts to troubleshoot network issues, monitor network traffic, or detect security attacks.
+Command:  tcpdump -i <interface> ，默认只显示第三层及以上的info, Option: -e 开启后可以看到第二层的info; -i可以指定看某接口的数据流，否则会捕捉全部 
+
+# ARP and NDP
+
+
