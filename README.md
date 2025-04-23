@@ -20,6 +20,14 @@ Protocols: TCP,UDP
 6.Presentation
 7.Application
 
+# 网络划分基本结构
+subnet和network是第三层的分类，LAN和VLAN是第二层的分类。大多数情况一个LAN包含着一个子网，而同一个LAN中的设备都在地理位置有共同点。一个Network通常由一个或多个LAN来组成。同一个LAN中的设备交流只需要借助switch，同一个network中不同LAN之间的交流需要借助bridge。而不同Network之间的交流是需要借助Router。VLAN是第二层当中一个特殊的LAN，因为通常LAN的划分都是通过地理位置，但如果你想通过一些其他的逻辑来隔离和划分设备的话，你可以把它们接入不同的虚拟LAN中。如果讲同一个网络中位于不同LAN的设备接入同一个VLAN中，它们可以借助该VLAN进行LAN内交流，也就是只通过switch，而不需要bridge。
+
+Subnet and Network are classifications at the third layer, while LAN and VLAN are classifications at the second layer. In most cases, a single LAN contains a single subnet, and the devices within the same LAN typically have a common geographical location. A Network usually consists of one or more LANs. Devices within the same LAN can communicate using a switch, while communication between different LANs within the same Network requires a bridge. Communication between different Networks requires a router.
+
+VLAN is a special type of LAN at the second layer because LANs are usually divided based on geographical locations. However, if you want to isolate and segment devices based on logical criteria, you can place them into different virtual LANs. If devices in different LANs within the same network are connected to the same VLAN, they can communicate with each other as if they are within the same LAN, using only a switch and not a bridge.
+
+
 # 什么是基于类的地址转发和CIDR？它们的区别是什么？
 
 IPv4 addresses are divided into five classes (A–E) based on their leading bits.
