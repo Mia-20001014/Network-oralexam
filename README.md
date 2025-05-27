@@ -27,6 +27,10 @@ Subnet and Network are classifications at the third layer, while LAN and VLAN ar
 
 VLAN is a special type of LAN at the second layer because LANs are usually divided based on geographical locations. However, if you want to isolate and segment devices based on logical criteria, you can place them into different virtual LANs. If devices in different LANs within the same network are connected to the same VLAN, they can communicate with each other as if they are within the same LAN, using only a switch and not a bridge.
 
+# ip地址，Mac地址，接口（Ethernet），端口（port），套接字（socket），程序，网络协议的理解
+
+假设你的设备是一栋办公大楼，ip地址就是你大楼的地址，你可以通过在导航输入这个ip地址，来到办公大楼前。接口就类似于你这个办公楼的整体出入口，可能有前门后门或者等等（可以有多个门）。如果你的办公园区楼很大，每个接口就有自己的地址，你打车到前门和后门是不一样的，但是都是到了这个楼的入口。为了区分，硬件厂家会在出场就为每个接口设置一个MAC地址，是不可以改动的。但你每个接口的ip地址你是可以改动的。你的目的当然不仅仅是来到大楼前，你是要进去办事，所以你进去后，你要和前台交流。前台的工作就类似于操作系统的工作。你要告诉前台，你来这里是想办什么业务（告诉操作系统你的网络协议），找哪个办公室，每个业务部门可能有一个或多个办公室，每个办公室有自己的门牌号，但是一个办公室只能一个业务部门用，这个办公室门牌号就类似于端口号的作用。你还要告诉前台，你找这个业务部门的哪个负责人（哪个程序）。前台接收完你的信息后，就用对讲机给办公室发消息，每个办公室有一台自己的对讲机，套接字就类似于对讲机的工作。
+
 
 # 什么是基于类的地址转发和CIDR？它们的区别是什么？
 
