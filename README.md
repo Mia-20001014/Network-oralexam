@@ -1,6 +1,8 @@
 # Network-oralexam
 Some basic kownledges in Blatt1
 
+# 什么是网络自治系统，什么是BGP
+
 # 经典OSI七层模型每层分别是什么？数据在每一层以什么形式传输？前三层每一层有些什么设备？这些设备的作用是什么？前四层是如何配合的？
 The classic OSI 7 layers model: 
 
@@ -63,7 +65,7 @@ Neighbor reachability detection
 Router discovery
 Prefix distribution
 
-# OSPF,RIP,BGP
+# OSPF,RIP
 RIP：基层算法使用的是Distance Vector
 原理：每个Router将自己直接相连的Router的hop count设置为1，然后将这些信息告诉所有和自己直接相连router，同时接收其他直连的router的路由信息，并据此更新自己的路由表，每通过一个设备就将hop count+1，并将最短路径存入。更新后再次发给与自己直连的，直到所有Router的路由表不再更新。超过hop count的设备被定义为不可达，所以更适合小型网络，可以快速收敛。
 Each router sets the hop count to 1 for the routers directly connected to it, and then shares this information with all its directly connected routers. At the same time, it receives routing information from its direct neighbors and updates its routing table accordingly. For each additional device passed, the hop count is incremented by 1, and the shortest path is stored. After updating, the router sends the updated information to its directly connected neighbors, and this process continues until the routing tables of all routers no longer change. Devices that exceed the hop count limit are defined as unreachable, making this method more suitable for small networks where it can converge quickly.
