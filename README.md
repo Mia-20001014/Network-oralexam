@@ -55,6 +55,9 @@ IP Address + Router table --> a list of IP Address, which can match the input IP
 tcpdump is a network packet capture tool that allows users to intercept and analyze packets on a network. It provides detailed information about each packet passing through a network interface, such as source IP address, destination IP address, protocol type, and port numbers. It's commonly used by network administrators and security analysts to troubleshoot network issues, monitor network traffic, or detect security attacks.
 Command:  tcpdump -i <interface> ，默认只显示第三层及以上的info, Option: -e 开启后可以看到第二层的info; -i可以指定看某接口的数据流，否则会捕捉全部 
 
+# static routing 和动态routing
+
+
 # ARP and NDP
 ARP (Address Resolution Protocol) is used in IPv4 networks to map an IP address to a MAC address. Since communication on the local network happens via MAC addresses, ARP is necessary to discover the hardware address associated with an IP. (like a phone number book)
 
@@ -64,6 +67,10 @@ Stateless address autoconfiguration
 Neighbor reachability detection
 Router discovery
 Prefix distribution
+
+# fragment and MTU in ipv4 and ipv6
+
+
 
 # OSPF,RIP
 RIP：基层算法使用的是Distance Vector
